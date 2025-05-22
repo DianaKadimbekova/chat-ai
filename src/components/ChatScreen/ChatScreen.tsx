@@ -1,6 +1,6 @@
 import { Footer } from "../Footer/Footer";
-import { Main } from "../Mainn/Main";
-import "./ChatScreen.scss";
+import { Main } from "../Main/Main";
+import "./ChatScreen.module.scss";
 
 export const ChatScreen: React.FC = () => {
   const handleSendMessage = (message: string) => {

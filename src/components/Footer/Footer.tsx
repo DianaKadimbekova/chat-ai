@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Footer.scss";
+import styles from "./Footer.module.scss";
 import { FiArrowUpRight } from "react-icons/fi";
 
 interface FooterProps {
@@ -23,21 +23,21 @@ export const Footer: React.FC<FooterProps> = ({ handleSendMessage }) => {
   };
 
   return (
-    <footer className="footer">
-      <form className="footer__input-box" onSubmit={handleSubmit}>
+    <footer className={styles.footer}>
+      <form className={styles["footer__input-box"]} onSubmit={handleSubmit}>
         <input
           type="text"
-          className="footer__input"
+          className={styles["footer__input"]}
           placeholder="Ask anything..."
           value={message}
           onChange={handleInputChange}
         />
         <button
           type="submit"
-          className="footer__button-submit"
+          className={styles["footer__button-submit"]}
           disabled={!message.trim()}
         >
-          <FiArrowUpRight className="footer__send-icon" />
+          <FiArrowUpRight className={styles["footer__send-icon"]} />
         </button>
       </form>
     </footer>
