@@ -1,0 +1,23 @@
+@use '/src/assets/styles/variables' as *;
+
+.main {
+  background-color: $main-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  color: $secondary-text-color;
+
+  &__logo {
+    width: 244px;
+    height: 66px;
+    margin-inline: auto;
+  }
+
+  &__text {
+    font-family: $main-font;
+    padding-bottom: 40px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,105 @@
+@use '/src/assets/styles/variables' as *;
+
+.footer {
+  &__input-box {
+    position: relative;
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 5px;
+    background-color: #FFFFFF;
+
+    width: 645px;
+    height: 100px;
+    border-radius: 28px;
+    border: none;
+
+    padding: 20px;
+  }
+
+  &__input {
+    font-family: $main-font;
+    color: $chat-box-text;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 28px;
+    border: none;
+    
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: $chat-box-text;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+    width: 100%; 
+  }
+
+  &__dropdown {
+    color: $chat-box-text;
+    width: 70px;
+    height: 30px;
+    background-color: $chat-box-modal;
+    border: none;
+    border-radius: 8px;
+    &:focus {
+      border: none;
+    }
+
+    &--item {
+
+      &:focus {
+        border: none;
+      }
+      
+      font-family: $main-font;
+      text-align: center;
+    }
+  }
+
+  &__button-submit {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #81E181;
+    padding: 0; 
+    color: white;
+    border: none;
+    border-radius: 28%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover:not(:disabled) {
+      background-color: #6AC46A;
+    }
+
+    &:disabled {
+      background-color: #81E181;
+      cursor: not-allowed;
+    }
+  }
+
+  &__send-icon {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
