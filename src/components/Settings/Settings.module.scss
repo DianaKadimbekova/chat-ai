@@ -1,0 +1,102 @@
+@use '/src/assets/styles/variables' as *;
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+.settings {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  width: 680px;
+  height: 600px;
+  padding: 23px;
+  border-radius: 28px;
+  margin-inline: auto;
+  background-color: $settings-background;
+
+  &__title {
+    font-family: $main-font;
+    font-size: 32px;
+    padding-bottom: 11px;
+  }
+
+  &__line {
+    border: none;
+    border-top: solid 1px $chat-box-text;
+    padding: 0;
+    margin: 0;
+    height: 2px;
+  }
+
+  &__item {
+    font-family: $main-font;
+  }
+
+  &__btn {
+    position: absolute;
+    align-items: center;
+    bottom: 20px;
+    width: 159px;
+    height: 37px;
+    background-color: $settings-btn;
+    border-radius: 12px;
+    border: none;
+
+    &--text {
+      font-family: $main-font;
+      font-size: 20px;
+      padding-left: 20px;
+    }
+
+    &--arrow {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 18px;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    background-color: $settings-btn;
+    border-radius: 12px;
+
+    padding: 9px 20px;
+  }
+
+  &__name {
+    font-size: 16px;
+  }
+
+  &__list {
+    background-color: $settings-btn;
+    border-radius: 12px;
+    border: none;
+
+    font-family: $main-font;
+    font-size: 16px;
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  &__choose {
+    background-color: $settings-btn;
+    border-radius: 12px;
+    border: none;
+
+    font-family: $main-font;
+    font-size: 16px;
+  }
+}
